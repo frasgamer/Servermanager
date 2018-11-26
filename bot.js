@@ -140,8 +140,8 @@ client.on('message', message => {
      const embed = new Discord.RichEmbed() 
          .setThumbnail(message.author.avatarURL)
          .setColor("#00FF00")
-         .setDescription(`**  السيرفر الرسمي للبوت :  :dove:  https://discord.gg/TZ3dcyC :scroll:
-         :hearts: الموقع الرسمي للبوت https://aboodealnaimat.wixsite.com/superbot: website here  :hearts: **`)
+         .setDescription(`**  السيرفر الرسمي للبوت :  :dove:  نعذتر بوت خاص ولايوجد رابط :scroll:
+         :hearts: الموقع الرسمي للبوت نعتذر بوت خاص ولايوجد رابط: website here  :hearts: **`)
    message.author.sendEmbed(embed)
    
    }
@@ -153,7 +153,7 @@ client.on('message', message => {
          .setThumbnail(message.author.avatarURL)
          .setColor("#00FF00")
          .setDescription(`**  السيرفر الرسمي للبوت :  :dove:  https://discord.gg/TZ3dcyC :scroll:
-         :hearts: الموقع الرسمي للبوت https://aboodealnaimat.wixsite.com/superbot: website here  :hearts: **`)
+         :hearts: الموقع الرسمي للبوت نعتذر بوت خاص ولايوجد رابط: website here  :hearts: **`)
    message.author.sendEmbed(embed)
    
    }
@@ -165,7 +165,7 @@ client.on('message', message => {
          .setThumbnail(message.author.avatarURL)
          .setColor("#00FF00")
          .setDescription(`**  السيرفر الرسمي للبوت :  :dove:  https://discord.gg/TZ3dcyC :scroll:
-         :hearts: الموقع الرسمي للبوت https://aboodealnaimat.wixsite.com/superbot: website here  :hearts: **`)
+         :hearts: الموقع الرسمي للبوت no: website here  :hearts: **`)
    message.author.sendEmbed(embed)
    
    }
@@ -177,7 +177,7 @@ client.on('message', message => {
          .setThumbnail(message.author.avatarURL)
          .setColor("#00FF00")
          .setDescription(`**  السيرفر الرسمي للبوت :  :dove:  https://discord.gg/TZ3dcyC :scroll:
-         :hearts: الموقع الرسمي للبوت https://aboodealnaimat.wixsite.com/superbot: website here  :hearts: **`)
+         :hearts: الموقع الرسمي للبوت no: website here  :hearts: **`)
    message.author.sendEmbed(embed)
    
    }
@@ -189,7 +189,7 @@ client.on('message', message => {
          .setThumbnail(message.author.avatarURL)
          .setColor("#00FF00")
          .setDescription(`**  السيرفر الرسمي للبوت :  :dove:  https://discord.gg/TZ3dcyC :scroll:
-         :hearts: الموقع الرسمي للبوت https://aboodealnaimat.wixsite.com/superbot: website here  :hearts: **`)
+         :hearts: الموقع الرسمي للبوت no: website here  :hearts: **`)
    message.author.sendEmbed(embed)
    
    }
