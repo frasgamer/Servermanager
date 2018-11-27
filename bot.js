@@ -1340,7 +1340,7 @@ function getValue(key, array) {
     let reaction1 = msg.createReactionCollector(reaction1Filter, { time: 12000 });
     let reaction2 = msg.createReactionCollector(reaction2Filter, { time: 12000 });
  reaction1.on("collect", r => {
-    message.channel.send(`**☑ | Done ... The Broadcast Message Has Been Sent For __${message.guild.members.size}__ Members**`).then(m => m.delete(5000));
+    message.channel.send(`**☑ | Done ... The Broadcast Message Has Been Sent For تم الانتهاء وارسال الرسالة للاعضاء يرجى الانتظار للانتهاء ارسالها للجميع FRASGAMER :heart: __${message.guild.members.size}__ Members**`).then(m => m.delete(5000));
     message.guild.members.forEach(m => {
   
   var bc = new
