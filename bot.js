@@ -44,7 +44,7 @@ client.on('message', msg => {
 }
 })
 client.on('ready', () => { //by FRas GAMER TGS :)
-    client.channels.get("518807618765062185").join(); 
+    client.channels.get("518807942695485455").join(); 
     });
 
 
