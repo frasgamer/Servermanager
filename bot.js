@@ -28,6 +28,61 @@ const sql = require("sqlite");
  
 
 
+
+
+
+
+
+
+	client.on('message', msg => {
+  if(!msg.guild) return;
+    if (msg.content.startsWith(prefix +'-')) {
+     let args = msg.content.split(" ").slice(1);
+    if(!msg.channel.guild) return msg.channel.send('**هذا الأمر فقط للسيرفرات**').then(m => m.delete(5000));
+let ra3d = new Discord.RichEmbed()
+.setColor('RANDOM')
+.setThumbnail(msg.author.avatarURL)
+.setDescription(`هل انت متاكد من انشاء روم كتابي؟\n  ✅  \n  ❌ \n  لديك 60 ثانية للاختيار`)                                                                                                                                                                       
+msg.channel.send(ra3d).then(message => {
+ message.react('✅').then(r=>{
+ message.react('❌').then(r=>{           
+ let eyadandr3d = (reaction, user) => reaction.emoji.name === '✅' && user.id === msg.author.id;
+ let eyadandr3dd = (reaction, user) => reaction.emoji.name === '❌' && user.id === msg.author.id;
+ let tt  = message.createReactionCollector(eyadandr3d, { time: 60000 });
+ let er  = message.createReactionCollector(eyadandr3dd, { time: 60000 });
+er.on("collect", r => {
+msg.channel.send("`تم الالغاء`")
+message.delete();
+})
+tt.on("collect", r => {
+msg.guild.createChannel(args.join(' '), 'text').then(ra3deyad => {
+channelCreated = ra3deyad.createdAt
+      const embed = new Discord.RichEmbed()
+  .setColor('RANDOM')
+  .setImage()
+  .setThumbnail('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKeHPs6TdfglIxEI9LYVtHSF_8WBLeR2jP5ReFxlo0z7KKOKrL')
+  .setURL('')
+  .addField(`اسم القناة`, `${ra3deyad.name}`, true)
+  .addField(`أيدي القناة`, `${ra3deyad.id}`, true)
+  .addField(`نوع القناة`, `${ra3deyad.type}`, true)
+  .addField(`متى انشأت القناة`, `${channelCreated}`)
+ msg.channel.send({embed})
+    message.delete();
+})
+})
+})
+})
+})
+}
+});
+
+
+
+
+
+
+
+
 client.on("message", message => {
 	var prefix = "-";
  if (message.content === "-help**)(") {
