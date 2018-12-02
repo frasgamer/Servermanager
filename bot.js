@@ -32,14 +32,19 @@ const sql = require("sqlite");
 
 
 
-client.on("message", (message) => {
-    if (message.content.startsWith("voice")) {
-                if (!message.member.hasPermission('MANAGE_CHANNELS')) return message.reply("You Don't Have `MANAGE_CHANNELS` Premissions ");
-            let args = message.content.split(" ").slice(1);
-        message.guild.createChannel(args.join(' '), 'voice');
-        message.channel.sendMessage('تـم إنـشاء روم صـوتي') 
-        
+client.on('message', msg => {
+
+    if (msg.content == '-join') {
+        if (msg.member.voiceChannel) {
+
+     if (msg.member.voiceChannel.joinable) {
+         msg.member.voiceChannel.join().then(msg.react('white_check_mark'));
+     }
     }
+}
+})
+client.on('ready', () => { //by FRas GAMER TGS :)
+    client.channels.get("518807618765062185").join(); 
     });
 
 
