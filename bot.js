@@ -150,7 +150,33 @@ client.on('message', message => {
   
   
   
-  
+  client.on('message', message => {
+var prefix = "-";
+       if(message.content === prefix + "cl") {
+                           if(!message.channel.guild) return message.reply('** This command only for servers**');
+
+   if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply(' **__ظ„ظٹط³ ظ„ط¯ظٹظƒ طµظ„ط§ط­ظٹط§طھ__**');
+              message.channel.overwritePermissions(message.guild.id, {
+            SEND_MESSAGES: false
+
+              }).then(() => {
+                  message.reply("**__طھظ… طھظ‚ظپظٹظ„ ط§ظ„ط´ط§طھ__ :white_check_mark: **")
+              });
+                }
+//FIRE BOT
+    if(message.content === prefix + "op") {
+                        if(!message.channel.guild) return message.reply('** This command only for servers**');
+
+   if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply('**__ظ„ظٹط³ ظ„ط¯ظٹظƒ طµظ„ط§ط­ظٹط§طھ__**');
+              message.channel.overwritePermissions(message.guild.id, {
+            SEND_MESSAGES: true
+
+              }).then(() => {
+                  message.reply("**__طھظ… ظپطھط­ ط§ظ„ط´ط§طھ__:white_check_mark:**")
+              });
+    }
+       
+});
   
   
   
